@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif !important;
+}
+body {
+  overflow-x: hidden;
+  background-color: #F6F4EF;
+}
+p {
+  margin-bottom: 0 !important;
+}
+h3 {
+  font-size: 1.3rem !important;
+}
+.bg-title {
+  background-color: #FFDEA8;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.bg-white {
+  background-color: #fff;
+}
+.bg-orange {
+  background-color: #FAD8BD;
+}
+.bg-thinbrown {
+  background-color: #FFD9AF;
+}
+.bg-thinorange {
+  background-color:#FCF0E5;
+}
+.bg-skin {
+  background-color: #FFF6EB;
+}
+.text-brown,h2 {
+  color:#9A4B07;
+}
+.text-thinbrown,p,li {
+  color: #BF7C42;
+}
+.text-question{
+  color: #9A4B07;
+  text-shadow: 0 3px 6px #9D9494;
+}
+.text-white {
+  color: #fff;
+}
+.top-text {
+  color: #BF7757;
+}
+.container,
+.container-noside {
+  margin-top: 140px;
+}
+.container {
+  padding: 25px 25px;
+}
+.container-noside {
+  padding: 25px 0;
+}
+.box {
+  border-radius: 40px;
+  padding: 25px !important;
+  margin-bottom: 40px;
+  position: relative;
+}
+#tomodesign {
+  margin-bottom: 80px;
+}
+/*ラインのボタン*/
+.line-wrap a {
+  display: inline-block;
+  color: #fff;
+  background-color: #DD5B1A;
+  text-decoration: none;
+  width: 120px;
+  padding: 10px 40px 10px 20px;
+  border-radius: 50px;
+  text-align: center;
+  margin: 0;
+}
+.line-wrap a::before {
+  content: "";
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  height: 0;
+  width: 0px;
+  transform: rotate(45deg);
+  right: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  position: absolute;
+  padding: 6px;
+  transition: .5s;
+}
+.line-wrap a:hover::before {
+  right: 20px;
+}
+.line-wrap a:hover {
+  text-decoration: none;
+  color: white;
+}
+/*ラインのボタンここまで*/
+
+/*ヘッダー*/
+header {
+  height: 60px;
+  background-color: #674E08;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/*ヘッダーここまで*/
+
+/*フッター*/
+footer {
+  height: 50px;
+  background-color: #674E08;
+}
+footer .copyright {
+  padding: 15px;
+  font-size: .7rem;
+}
+/*フッターここまで*/
+
+/*トップ部分*/
+#tomodesign .top-container {
+  height: 100vh;
+}
+#tomodesign .top-container .title-wrap {
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0 25px;
+}
+#tomodesign .top-container .title-wrap h1 {
+  font-size: 8vw;
+}
+#tomodesign .top-container .scroll {
+  bottom: -10px;
+  display: block;
+}
+#tomodesign .top-container .scroll:hover {
+  text-decoration: none;
+  color: #9A4B07;
+  opacity: 0.6;
+}
+#tomodesign .top-container .scroll::before,
+#tomodesign .top-container .scroll::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  background: #9A4B07;
+  bottom: -15px;
+}
+#tomodesign .top-container .scroll:hover::before,
+#tomodesign .top-container .scroll:hover::after {
+  bottom: -25px;
+  transition: .5s;
+}
+#tomodesign .top-container .scroll::before {
+  transform: rotate(45deg);
+  left: calc(50% - 17px);
+}
+#tomodesign .top-container .scroll::after {
+  transform:rotate(-45deg);
+  right: calc(50% - 17px);
+}
+/*トップ部分ここまで*/
+#tomodesign #profile .title {
+  background-image: url(../img/\ keisuke7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#tomodesign #profile .title::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  position: absolute;
+}
+#tomodesign #profile .title .uk-padding {
+  z-index: 10;
+}
+#tomodesign .history {
+  padding: 25px;
+}
+#tomodesign .history ul li {
+  margin-bottom: 30px;
+}
+#tomodesign .history ul li p {
+  margin-top: 5px;
+}
+#tomodesign #service .content-wrap {
+  padding: 0 25px;
+  margin-top: 30px;
+}
+#tomodesign #service .content-wrap p {
+  margin-top: -10px;
+}
+#tomodesign #experienced .content-wrap {
+  padding: 0 25px;
+}
+#tomodesign #experienced .uk-accordion-title::before {
+  content: "";
+  border-top: 2px solid #BF7757;
+  border-right: 2px solid #BF7757;
+  height: 0;
+  width: 0px;
+  transform: rotate(135deg);
+  right: 30px;
+  top: 30px;
+  margin: auto;
+  display: block;
+  position: absolute;
+  padding: 6px;
+  transition: .5s;
+  background-image: unset;
+}
+#tomodesign #experienced .uk-open .uk-accordion-title::before {
+  transform: rotate(-45deg);
+}
+#tomodesign #price {
+  padding-bottom: 0;
+}
+#tomodesign .price-wrap {
+  padding: 0 25px;
+}
+#tomodesign .price-wrap .box {
+  border: solid 5px #707070;
+}
+#tomodesign .price-wrap .box:nth-child(2) ul {
+  width: 210px;
+  margin: auto;
+}
