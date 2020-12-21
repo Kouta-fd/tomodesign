@@ -114,6 +114,69 @@ header {
   width: 100%;
   z-index: 1000;
 }
+header .title {
+  padding: 13px 25px;
+  font-size: 1.4rem;
+}
+header .menu-trigger span {
+  height: 1.5px;
+  width: 30px;
+  background: #fff;
+  display: block;
+  position: absolute;
+  right: 20px;
+}
+header .menu-trigger span:nth-child(1) {
+  top: 20px;
+}
+header .menu-trigger span:nth-child(2) {
+  top: 30px;
+}
+header .menu-trigger span:nth-child(3) {
+  top: 40px;
+}
+body header .menu-block {
+  top: -100%;
+  transition: .5s;
+}
+body header .menu-block .content, body header .menu-block .line-wrap {
+  display: none
+}
+body.open header .menu-block {
+  display: block;
+  position: absolute;
+  top: 60px;
+  width: 300px;
+  height: 80vh;
+  right: 0;
+  background: #fff;
+  transition: .5s;
+  padding-top: 50px;
+}
+body.open header .menu-block .content {
+  text-align: center;
+  margin-top: 20px;
+  display: block;
+}
+body.open header .menu-block .content a {
+  text-decoration: none;
+  color: #BF7757;
+  font-size: 1.3rem;
+}
+body.open header .menu-block .line-wrap {
+  display: block;
+}
+body.open header .menu-trigger span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 30px;
+}
+body.open header .menu-trigger span:nth-child(2) {
+  display: none;
+}
+body.open header .menu-trigger span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 30px;
+}
 /*ヘッダーここまで*/
 
 /*フッター*/
@@ -121,13 +184,58 @@ footer {
   height: 50px;
   background-color: #674E08;
 }
+footer .scroll-up {
+  display: block;
+}
+footer .scroll-up {
+  border-radius: 50%;
+  background-color: #fff;
+  border: solid 2px #707070;
+  width: 40px;
+  height: 40px;
+  bottom: 15px;
+  right: 10px;
+  position: fixed;
+  z-index: 100;
+}
+footer .scroll-up::before {
+  content: "";
+  border-top: solid 2px #707070;
+  border-right: solid 2px #707070;
+  padding: 8px;
+  transform: rotate(-45deg);
+  display: block;
+  top: 35%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
 footer .copyright {
   padding: 15px;
   font-size: .7rem;
 }
 /*フッターここまで*/
 
+/*ふぇいどいん*/
+.fadein {
+  opacity : 0;
+  transform : translate(0, 100px);
+  transition : all 1s;
+}
+.fadein.active{
+  opacity : 1;
+  transform : translate(0, 0);
+}
+/*フェイドイン*/
+
 /*トップ部分*/
+.start1,
+.start2,
+.start3 {
+  display: none;
+}
 #tomodesign .top-container {
   height: 100vh;
 }
@@ -137,6 +245,7 @@ footer .copyright {
   right: 0;
   margin: auto;
   padding: 0 25px;
+  display: none;
 }
 #tomodesign .top-container .title-wrap h1 {
   font-size: 8vw;
