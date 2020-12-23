@@ -411,10 +411,10 @@ footer .copyright {
 }*/
 /*トップ部分ここまで*/
 #tomodesign #intro .img-wrap {
-  width: 40%;
+  width: 50%;
   right: 20px;
-  bottom: -50px;
-  z-index: -5;
+  /*bottom: -50px;
+  z-index: -5;*/
 }
 #tomodesign #intro .img-wrap img{
   border-radius: 20px;
