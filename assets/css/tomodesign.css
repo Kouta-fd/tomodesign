@@ -83,6 +83,9 @@ li {
 #tomodesign {
   margin-bottom: 100px;
 }
+.mg-no {
+  margin: 0 !important;
+}
 /*ラインのボタン*/
 .line-wrap {
   position: relative;
@@ -370,7 +373,7 @@ footer .copyright {
   20% {
     transform: rotate(-45deg) translate(-3px, 3px);
   }
-  40% {
+  40% {                                       
     transform: rotate(-45deg) translate(0, 0);
   }
 }
@@ -470,27 +473,32 @@ footer .copyright {
 #tomodesign #experienced .content-wrap {
   padding: 0 25px;
 }
+#tomodesign #experienced .name-wrap {
+  font-size: 1.2rem;
+}
 #tomodesign #experienced .img-wrap img {
   border-radius: 50%;
   width:60px;
   height: 60px;
+  min-width: 60px;
 }
 #tomodesign #last .img-wrap {
-  bottom: -20%;
+  /*bottom: -20%;
   right: 20px;
   width: 40%;
-  z-index: -5;
+  z-index: -5;*/
+  margin: 10px auto 0 auto;
 }
-#tomodesign #last .img-wrap::before {
+/*#tomodesign #last .img-wrap::before {
   content: "";
-  background-color: rgba(245, 244, 239, 0.4);
+  background-color: rgba(245, 244, 239, 0.6);
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   display: block;
   position: absolute;
-}
+}*/
 #tomodesign #experienced .uk-accordion-title::before {
   content: "";
   border-top: 2px solid #bf7757;
@@ -558,5 +566,16 @@ footer .copyright {
     margin: auto;
     padding: 0 25px;
     display: none;
+  }
+}
+@media screen and (max-width: 340px) {
+  #tomodesign #experienced .name-wrap {
+    font-size: .9rem;
+  }
+  #tomodesign #experienced .img-wrap img {
+    border-radius: 50%;
+    width:50px;
+    height: 50px;
+    min-width: 50px;
   }
 }
