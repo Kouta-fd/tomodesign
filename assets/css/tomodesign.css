@@ -118,36 +118,52 @@ header .title {
   padding: 13px 25px;
   font-size: 1.4rem;
 }
+body header .menu-trigger {
+  display: block;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+}
 header .menu-trigger span {
   height: 1.5px;
   width: 30px;
   background: #fff;
   display: block;
   position: absolute;
-  right: 20px;
+  right: 0;
+  transition: .5s;
 }
 header .menu-trigger span:nth-child(1) {
-  top: 20px;
+  top: 10px;
 }
 header .menu-trigger span:nth-child(2) {
-  top: 30px;
+  top: 20px;
 }
 header .menu-trigger span:nth-child(3) {
-  top: 40px;
+  top: 30px;
 }
 body header .menu-block {
   top: -100%;
-  transition: .5s;
+  transition: 1s;
+  width: 300px;
+  height: 0;
+  right: 0;
+  position: absolute;
+  z-index: -10;
 }
 body header .menu-block .content, body header .menu-block .line-wrap {
-  display: none
+  display: none;
 }
 body.open header .menu-block {
   display: block;
   position: absolute;
   top: 60px;
   width: 300px;
-  height: 80vh;
+  height: 100vh;
   right: 0;
   background: #fff;
   transition: .5s;
@@ -168,14 +184,14 @@ body.open header .menu-block .line-wrap {
 }
 body.open header .menu-trigger span:nth-child(1) {
   transform: rotate(45deg);
-  top: 30px;
+  top: 20px;
 }
 body.open header .menu-trigger span:nth-child(2) {
   display: none;
 }
 body.open header .menu-trigger span:nth-child(3) {
   transform: rotate(-45deg);
-  top: 30px;
+  top: 20px;
 }
 /*ヘッダーここまで*/
 
@@ -231,13 +247,11 @@ footer .copyright {
 /*フェイドイン*/
 
 /*トップ部分*/
-.start1,
-.start2,
-.start3 {
-  display: none;
-}
 #tomodesign .top-container {
   height: 100vh;
+  background-color: #F6F4EF;
+  z-index: 10;
+  box-shadow: 10px 10px 15px #F6F4EF;
 }
 #tomodesign .top-container .title-wrap {
   bottom: 20%;
@@ -269,18 +283,90 @@ footer .copyright {
   background: #9A4B07;
   bottom: -15px;
 }
-#tomodesign .top-container .scroll:hover::before,
+/*#tomodesign .top-container .scroll:hover::before,
 #tomodesign .top-container .scroll:hover::after {
   bottom: -25px;
-  transition: .5s;
-}
+}*/
 #tomodesign .top-container .scroll::before {
   transform: rotate(45deg);
   left: calc(50% - 17px);
+  -webkit-animation: al 1s infinite;
+  animation: al 1s infinite;
 }
 #tomodesign .top-container .scroll::after {
   transform:rotate(-45deg);
   right: calc(50% - 17px);
+  -webkit-animation: ar 1s infinite;
+  animation: ar 1s infinite;
+}
+@-webkit-keyframes al {
+  0% {
+    -webkit-transform: rotate(45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(45deg) translate(3px, 3px);
+  }
+  40% {
+    -webkit-transform: rotate(45deg) translate(0, 0);
+  }
+}
+@keyframes al {
+  0% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(45deg) translate(3px, 3px);
+  }
+  40% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+}
+@-webkit-keyframes ar {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-3px, 3px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+@keyframes ar {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-3px, 3px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
+.start1,
+.start2,
+.start3 {
+  display: none;
+}
+.bg-icon {
+  position: fixed;
+  top: 15%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+}
+.bg-icon:before {
+  content: "";
+  background-color: rgba(246, 244, 239, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  position: absolute;
+
 }
 /*トップ部分ここまで*/
 #tomodesign #profile .title {
@@ -352,4 +438,25 @@ footer .copyright {
 #tomodesign .price-wrap .box:nth-child(2) ul {
   width: 210px;
   margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .uk-container-small {
+    width: 700px !important;
+  }
+  #tomodesign .top-container .title-wrap h1 {
+  font-size: 2.5rem;
+    display: 300px;
+    width: 450px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #tomodesign .top-container .title-wrap {
+    bottom: 35%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0 25px;
+    display: none;
+  } 
 }
