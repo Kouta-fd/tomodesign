@@ -1,11 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif !important;
+  font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", "HG明朝E",
+    "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif !important;
 }
 body {
   overflow-x: hidden;
-  background-color: #F6F4EF;
+  background-color: #f6f4ef;
 }
 p {
   margin-bottom: 0 !important;
@@ -14,7 +15,7 @@ h3 {
   font-size: 1.3rem !important;
 }
 .bg-title {
-  background-color: #FFDEA8;
+  background-color: #ffdea8;
   padding: 10px;
   margin-bottom: 20px;
 }
@@ -22,36 +23,48 @@ h3 {
   background-color: #fff;
 }
 .bg-orange {
-  background-color: #FAD8BD;
+  background-color: #fad8bd;
 }
 .bg-thinbrown {
-  background-color: #FFD9AF;
+  background-color: #ffd9af;
 }
 .bg-thinorange {
-  background-color:#FCF0E5;
+  background-color: #fcf0e5;
 }
 .bg-skin {
-  background-color: #FFF6EB;
+  background-color: #fff6eb;
 }
-.text-brown,h2 {
-  color:#9A4B07;
+.text-brown,
+h2 {
+  color: #9a4b07;
 }
-.text-thinbrown,p,li {
-  color: #BF7C42;
+.text-thinbrown,
+p,
+li {
+  color: #bf7c42;
 }
-.text-question{
-  color: #9A4B07;
-  text-shadow: 0 3px 6px #9D9494;
+.text-question {
+  color: #9a4b07;
+  text-shadow: 0 3px 6px #9d9494;
 }
 .text-white {
   color: #fff;
 }
 .top-text {
-  color: #BF7757;
+  color: #bf7757;
+}
+.stress {
+  font-size: 1.3rem;
+  color: #9a4b07;
+}
+.text-bright {
+  color: #FF7600;
 }
 .container,
 .container-noside {
   margin-top: 140px;
+  position: relative;
+  z-index: 10;
 }
 .container {
   padding: 25px 25px;
@@ -66,13 +79,17 @@ h3 {
   position: relative;
 }
 #tomodesign {
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 /*ラインのボタン*/
+.line-wrap {
+  position: relative;
+  z-index: 10; 
+}
 .line-wrap a {
   display: inline-block;
   color: #fff;
-  background-color: #DD5B1A;
+  background-color: #dd5b1a;
   text-decoration: none;
   width: 120px;
   padding: 10px 40px 10px 20px;
@@ -94,7 +111,7 @@ h3 {
   display: block;
   position: absolute;
   padding: 6px;
-  transition: .5s;
+  transition: 0.5s;
 }
 .line-wrap a:hover::before {
   right: 20px;
@@ -108,7 +125,7 @@ h3 {
 /*ヘッダー*/
 header {
   height: 60px;
-  background-color: #674E08;
+  background-color: #674e08;
   position: fixed;
   top: 0;
   width: 100%;
@@ -135,7 +152,7 @@ header .menu-trigger span {
   display: block;
   position: absolute;
   right: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 header .menu-trigger span:nth-child(1) {
   top: 10px;
@@ -155,7 +172,8 @@ body header .menu-block {
   position: absolute;
   z-index: -10;
 }
-body header .menu-block .content, body header .menu-block .line-wrap {
+body header .menu-block .content,
+body header .menu-block .line-wrap {
   display: none;
 }
 body.open header .menu-block {
@@ -166,7 +184,7 @@ body.open header .menu-block {
   height: 100vh;
   right: 0;
   background: #fff;
-  transition: .5s;
+  transition: 0.5s;
   padding-top: 50px;
 }
 body.open header .menu-block .content {
@@ -176,7 +194,7 @@ body.open header .menu-block .content {
 }
 body.open header .menu-block .content a {
   text-decoration: none;
-  color: #BF7757;
+  color: #bf7757;
   font-size: 1.3rem;
 }
 body.open header .menu-block .line-wrap {
@@ -198,7 +216,9 @@ body.open header .menu-trigger span:nth-child(3) {
 /*フッター*/
 footer {
   height: 50px;
-  background-color: #674E08;
+  background-color: #674e08;
+  position: relative;
+  z-index: 10;
 }
 footer .scroll-up {
   display: block;
@@ -230,28 +250,33 @@ footer .scroll-up::before {
 }
 footer .copyright {
   padding: 15px;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 /*フッターここまで*/
 
 /*ふぇいどいん*/
 .fadein {
-  opacity : 0;
-  transform : translate(0, 100px);
-  transition : all 1s;
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 1s;
 }
-.fadein.active{
-  opacity : 1;
-  transform : translate(0, 0);
+.fadein.active {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 /*フェイドイン*/
 
 /*トップ部分*/
 #tomodesign .top-container {
   height: 100vh;
-  background-color: #F6F4EF;
-  z-index: 10;
-  box-shadow: 10px 10px 15px #F6F4EF;
+  background-color: #f6f4ef;
+  /*z-index: 10;*/
+  box-shadow: 10px 10px 15px #f6f4ef;
+}
+#tomodesign .top-container .img-wrap {
+  height: 100%;
+  position: fixed;
+  z-index: 0;
 }
 #tomodesign .top-container .title-wrap {
   bottom: 20%;
@@ -260,17 +285,22 @@ footer .copyright {
   margin: auto;
   padding: 0 25px;
   display: none;
+  position: relative;
+  z-index: 20;
 }
 #tomodesign .top-container .title-wrap h1 {
   font-size: 8vw;
 }
 #tomodesign .top-container .scroll {
-  bottom: -10px;
-  display: block;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 15%;
+  z-index: 20;
 }
 #tomodesign .top-container .scroll:hover {
   text-decoration: none;
-  color: #9A4B07;
+  color: #9a4b07;
   opacity: 0.6;
 }
 #tomodesign .top-container .scroll::before,
@@ -280,7 +310,7 @@ footer .copyright {
   height: 1px;
   display: block;
   position: absolute;
-  background: #9A4B07;
+  background: #9a4b07;
   bottom: -15px;
 }
 /*#tomodesign .top-container .scroll:hover::before,
@@ -294,7 +324,7 @@ footer .copyright {
   animation: al 1s infinite;
 }
 #tomodesign .top-container .scroll::after {
-  transform:rotate(-45deg);
+  transform: rotate(-45deg);
   right: calc(50% - 17px);
   -webkit-animation: ar 1s infinite;
   animation: ar 1s infinite;
@@ -350,7 +380,7 @@ footer .copyright {
 }
 .bg-icon {
   position: fixed;
-  top: 15%;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -366,8 +396,18 @@ footer .copyright {
   right: 0;
   display: block;
   position: absolute;
-
 }
+/*#tomodesign .top-container::before {
+  content: "";
+  background-color: rgba(246, 244, 239, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  position: absolute;
+  transition: .5s;
+}*/
 /*トップ部分ここまで*/
 #tomodesign #profile .title {
   background-image: url(../img/\ keisuke7.jpg);
@@ -409,8 +449,8 @@ footer .copyright {
 }
 #tomodesign #experienced .uk-accordion-title::before {
   content: "";
-  border-top: 2px solid #BF7757;
-  border-right: 2px solid #BF7757;
+  border-top: 2px solid #bf7757;
+  border-right: 2px solid #bf7757;
   height: 0;
   width: 0px;
   transform: rotate(135deg);
@@ -420,7 +460,7 @@ footer .copyright {
   display: block;
   position: absolute;
   padding: 6px;
-  transition: .5s;
+  transition: 0.5s;
   background-image: unset;
 }
 #tomodesign #experienced .uk-open .uk-accordion-title::before {
@@ -444,13 +484,29 @@ footer .copyright {
     width: 700px !important;
   }
   #tomodesign .top-container .title-wrap h1 {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
     display: 300px;
     width: 450px;
     margin: auto;
   }
+  #tomodesign .top-container::before {
+    content: "";
+    background-color: rgba(246, 244, 239, 0.8);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    position: absolute;
+    transition: .5s;
+  }
+  #tomodesign .top-container .img-wrap,
+  .bg-icon {
+    width: 700px;
+    margin: auto;
+  }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   #tomodesign .top-container .title-wrap {
     bottom: 35%;
     left: 0;
@@ -458,5 +514,5 @@ footer .copyright {
     margin: auto;
     padding: 0 25px;
     display: none;
-  } 
+  }
 }
