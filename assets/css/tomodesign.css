@@ -10,6 +10,7 @@ body {
 }
 p {
   margin-bottom: 0 !important;
+  line-height: 2;
 }
 h3 {
   font-size: 1.3rem !important;
@@ -56,6 +57,7 @@ li {
 .stress {
   font-size: 1.3rem;
   color: #9a4b07;
+  margin-left: 200px;
 }
 .text-bright {
   color: #FF7600;
@@ -91,7 +93,6 @@ li {
   color: #fff;
   background-color: #dd5b1a;
   text-decoration: none;
-  width: 120px;
   padding: 10px 40px 10px 20px;
   border-radius: 50px;
   text-align: center;
@@ -104,7 +105,7 @@ li {
   height: 0;
   width: 0px;
   transform: rotate(45deg);
-  right: 30px;
+  right: 20px;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -114,7 +115,7 @@ li {
   transition: 0.5s;
 }
 .line-wrap a:hover::before {
-  right: 20px;
+  right: 10px;
 }
 .line-wrap a:hover {
   text-decoration: none;
@@ -409,6 +410,25 @@ footer .copyright {
   transition: .5s;
 }*/
 /*トップ部分ここまで*/
+#tomodesign #intro .img-wrap {
+  width: 40%;
+  right: 20px;
+  bottom: -50px;
+  z-index: -5;
+}
+#tomodesign #intro .img-wrap img{
+  border-radius: 20px;
+}
+#tomodesign #intro .img-wrap::before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  position: absolute;
+}
 #tomodesign #profile .title {
   background-image: url(../img/\ keisuke7.jpg);
   background-repeat: no-repeat;
@@ -444,8 +464,32 @@ footer .copyright {
 #tomodesign #service .content-wrap p {
   margin-top: -10px;
 }
+#tomodesign #experienced .uk-accordion-title {
+  cursor: pointer;
+}
 #tomodesign #experienced .content-wrap {
   padding: 0 25px;
+}
+#tomodesign #experienced .img-wrap img {
+  border-radius: 50%;
+  width:60px;
+  height: 60px;
+}
+#tomodesign #last .img-wrap {
+  bottom: -20%;
+  right: 20px;
+  width: 40%;
+  z-index: -5;
+}
+#tomodesign #last .img-wrap::before {
+  content: "";
+  background-color: rgba(245, 244, 239, 0.4);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  position: absolute;
 }
 #tomodesign #experienced .uk-accordion-title::before {
   content: "";
