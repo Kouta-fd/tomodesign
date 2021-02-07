@@ -68,7 +68,7 @@ li {
 }
 .container,
 .container-noside {
-  margin-top: 140px;
+  margin-top: 215px;
   position: relative;
   z-index: 10;
 }
@@ -569,6 +569,10 @@ footer .copyright {
 @media screen and (max-width: 450px) {
   .content-wrap .uk-position-relative {
     max-height: 200px;
+  }
+  .container,
+  .container-noside {
+    margin-top: 300px;
   }
 }
 @media screen and (max-width: 340px) {
