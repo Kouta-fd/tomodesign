@@ -59,6 +59,10 @@ li {
   color: #9a4b07;
   margin-left: 200px;
 }
+.text-big {
+  font-size: 1.5rem;
+  color: #FF7600;
+}
 .text-bright {
   color: #FF7600;
 }
@@ -258,7 +262,7 @@ footer .copyright {
 }
 /*フッターここまで*/
 
-/*ふぇいどいん*/
+/*フェイドいん*/
 .fadein {
   opacity: 0;
   transform: translate(0, 100px);
@@ -317,10 +321,7 @@ footer .copyright {
   background: #9a4b07;
   bottom: -15px;
 }
-/*#tomodesign .top-container .scroll:hover::before,
-#tomodesign .top-container .scroll:hover::after {
-  bottom: -25px;
-}*/
+
 #tomodesign .top-container .scroll::before {
   transform: rotate(45deg);
   left: calc(50% - 17px);
@@ -401,23 +402,12 @@ footer .copyright {
   display: block;
   position: absolute;
 }
-/*#tomodesign .top-container::before {
-  content: "";
-  background-color: rgba(246, 244, 239, 0.8);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  position: absolute;
-  transition: .5s;
-}*/
 /*トップ部分ここまで*/
+
+/*メイン*/
 #tomodesign #intro .img-wrap {
   width: 50%;
   right: 20px;
-  /*bottom: -50px;
-  z-index: -5;*/
 }
 #tomodesign #intro .img-wrap img{
   border-radius: 20px;
@@ -483,22 +473,8 @@ footer .copyright {
   min-width: 60px;
 }
 #tomodesign #last .img-wrap {
-  /*bottom: -20%;
-  right: 20px;
-  width: 40%;
-  z-index: -5;*/
   margin: 10px auto 0 auto;
 }
-/*#tomodesign #last .img-wrap::before {
-  content: "";
-  background-color: rgba(245, 244, 239, 0.6);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  position: absolute;
-}*/
 #tomodesign #experienced .uk-accordion-title::before {
   content: "";
   border-top: 2px solid #bf7757;
@@ -529,6 +505,28 @@ footer .copyright {
 }
 #tomodesign .price-wrap .box:nth-child(2) ul {
   width: 210px;
+  margin: auto;
+}
+.content-wrap .uk-position-relative {
+  height: 26rem;
+}
+.content-wrap .image1 {
+  top: 0;
+  left:0;
+  z-index: 30;
+  width: 60%;
+  height: auto;
+}
+.content-wrap .image2 {
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 60%;
+  height: auto;
+}
+.box .uk-list {
+  width: 35%;
+  min-width: 210px;
   margin: auto;
 }
 @media screen and (min-width: 768px) {
@@ -566,6 +564,11 @@ footer .copyright {
     margin: auto;
     padding: 0 25px;
     display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .content-wrap .uk-position-relative {
+    max-height: 200px;
   }
 }
 @media screen and (max-width: 340px) {
