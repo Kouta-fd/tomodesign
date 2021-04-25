@@ -68,10 +68,10 @@ a.top-text:hover {
 }
 .text-big {
   font-size: 1.5rem;
-  color: #FF7600;
+  color: #ff7600;
 }
 .text-bright {
-  color: #FF7600;
+  color: #ff7600;
 }
 .container,
 .container-noside {
@@ -100,7 +100,7 @@ a.top-text:hover {
 /*ラインのボタン*/
 .line-wrap {
   position: relative;
-  z-index: 10; 
+  z-index: 10;
 }
 .line-wrap a {
   display: inline-block;
@@ -381,7 +381,7 @@ footer .copyright {
   20% {
     transform: rotate(-45deg) translate(-3px, 3px);
   }
-  40% {                                       
+  40% {
     transform: rotate(-45deg) translate(0, 0);
   }
 }
@@ -416,7 +416,7 @@ footer .copyright {
   width: 50%;
   right: 20px;
 }
-#tomodesign #intro .img-wrap img{
+#tomodesign #intro .img-wrap img {
   border-radius: 20px;
 }
 #tomodesign #intro .img-wrap::before {
@@ -475,7 +475,7 @@ footer .copyright {
 }
 #tomodesign #experienced .img-wrap img {
   border-radius: 50%;
-  width:60px;
+  width: 60px;
   height: 60px;
   min-width: 60px;
 }
@@ -519,7 +519,7 @@ footer .copyright {
 }
 .content-wrap .image1 {
   top: 0;
-  left:0;
+  left: 0;
   z-index: 30;
   width: 60%;
   height: auto;
@@ -542,8 +542,8 @@ footer .copyright {
   }
   #tomodesign .top-container .title-wrap h1 {
     font-size: 2.5rem;
-    display: 300px;
-    width: 450px;
+    display: block;
+    width: 397px;
     margin: auto;
   }
   #tomodesign .top-container::before {
@@ -555,7 +555,7 @@ footer .copyright {
     right: 0;
     display: block;
     position: absolute;
-    transition: .5s;
+    transition: 0.5s;
   }
   #tomodesign .top-container .img-wrap,
   .bg-icon {
@@ -584,11 +584,11 @@ footer .copyright {
 }
 @media screen and (max-width: 340px) {
   #tomodesign #experienced .name-wrap {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   #tomodesign #experienced .img-wrap img {
     border-radius: 50%;
-    width:50px;
+    width: 50px;
     height: 50px;
     min-width: 50px;
   }
