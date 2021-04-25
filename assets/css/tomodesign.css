@@ -54,6 +54,13 @@ li {
 .top-text {
   color: #bf7757;
 }
+a.top-text {
+  text-decoration: none;
+}
+a.top-text:hover {
+  color: #bf7757;
+  text-decoration: none;
+}
 .stress {
   font-size: 1.3rem;
   color: #9a4b07;
