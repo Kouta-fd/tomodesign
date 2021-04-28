@@ -62,8 +62,8 @@ a.top-text:hover {
   text-decoration: none;
 }
 .stress {
-  font-size: 1.3rem;
-  color: #9a4b07;
+  /*font-size: 1.3rem;
+  color: #9a4b07;*/
   margin-left: 200px;
 }
 .text-big {
